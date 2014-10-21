@@ -4,6 +4,13 @@ class RaceCar implements RaceCarInterface
 {
 	private $vMax;
 	private $accel;
+	private $engine;
+	
+	public function __construct()
+	{
+		$this->engine = new Engine();
+	}
+	
 	
 	public function getVMax()
 	{
@@ -18,15 +25,10 @@ class RaceCar implements RaceCarInterface
 
 class Engine implements EngineInterface
 {
-	private $engine;
-	
-	public function __construct()
-	{
-		$this->engine = new Engine();
-	}
+	private $hp;
 	
 	public function getHP()
 	{
-	
+		return $this->hp;
 	}
 }
